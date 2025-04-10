@@ -1,0 +1,486 @@
+{
+	"info": {
+		"_postman_id": "a129e770-c503-4441-bf17-6be28624a015",
+		"name": "Supporta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41411594"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Anandhu A\",\r\n    \"email\": \"anandhuayyappan13@gmail.com\",\r\n    \"password\": \"SecurePass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Anandhu A\",\r\n    \"email\": \"anandhuayyappan13@gmail.com\",\r\n    \"password\": \"SecurePass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADDPRODUCT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Y2NGVkOGMxMDg3MWRkMzEwY2U5OGMiLCJyb2xlIjoiYWRtaW4iLCJ1c2VySWRUYWciOiJBRE0wMDEiLCJpYXQiOjE3NDQyMTI5OTIsImV4cCI6MTc0NDIxNjU5Mn0.WEzYfDh6TBv8LjjIBV-cI90LCmWWOfWNPAKv8aSro5w",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "hair drier",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "very good hair drier",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1400",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "fashion",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/MEARN/MERN/project-fair-server/uploads/image-1738216083392-Screenshot 2025-01-30 111742.png"
+						},
+						{
+							"key": "createdBy",
+							"value": "USER001",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/add-product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"add-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Y2NGVkOGMxMDg3MWRkMzEwY2U5OGMiLCJyb2xlIjoiYWRtaW4iLCJ1c2VySWRUYWciOiJBRE0wMDEiLCJpYXQiOjE3NDQyMjAzNzIsImV4cCI6MTc0NDIyMzk3Mn0.S1B6CX6k-YYZ8sW_9iKhV3NXzYTbqDPN2i5Ma6AFO3s",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "description",
+							"value": "this is the new description again once",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/MEARN/MERN/project-fair-server/uploads/image-1738215847750-Screenshot 2025-01-30 111219.png"
+						},
+						{
+							"key": "userId",
+							"value": "USER001",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "user",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/update-product/PROD001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update-product",
+						"PROD001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Anandhu A\",\r\n    \"email\": \"anandhuayyappan13@gmail.com\",\r\n    \"password\": \"SecurePass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADDWISHLIST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Y3MjJiMTAwODNkZjYxYTQ5MDE0MDIiLCJyb2xlIjoidXNlciIsInVzZXJJZFRhZyI6IlVTRVIwMDIiLCJpYXQiOjE3NDQyNTQ1OTcsImV4cCI6MTc0NDI1ODE5N30.d-4zirGA6gLIorlPuJ4jl8D1CBFGR1INT-zLUxPW2ig",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": \"PROD001\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/wishlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wishlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEEWISHLIST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Y3MjJiMTAwODNkZjYxYTQ5MDE0MDIiLCJyb2xlIjoidXNlciIsInVzZXJJZFRhZyI6IlVTRVIwMDIiLCJpYXQiOjE3NDQyNTQ1OTcsImV4cCI6MTc0NDI1ODE5N30.d-4zirGA6gLIorlPuJ4jl8D1CBFGR1INT-zLUxPW2ig",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": \"PROD001\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/wishlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wishlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WISHLISTDELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Y3MjJiMTAwODNkZjYxYTQ5MDE0MDIiLCJyb2xlIjoidXNlciIsInVzZXJJZFRhZyI6IlVTRVIwMDIiLCJpYXQiOjE3NDQyNTg5ODQsImV4cCI6MTc0NDI2MjU4NH0.Htbd_Am4TnTKS6JDd-YpWbzObbpUPcRsToCeE1qdtbo",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": \"PROD001\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/wishlist/PROD001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wishlist",
+						"PROD001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEARCH",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Y3NGJiMzY0NWJmYWFkMWMxMzUwN2UiLCJyb2xlIjoidXNlciIsInVzZXJJZFRhZyI6IlVTRVIwMDQiLCJpYXQiOjE3NDQyNjExNTIsImV4cCI6MTc0NDI2NDc1Mn0.GVKGXDVzpyR1D05Bbkriormau3-ehXpTFioAjRvuSzE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": \"PROD001\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/search?search=gel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "gel"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FILTERCATEGORY",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Y3MjJiMTAwODNkZjYxYTQ5MDE0MDIiLCJyb2xlIjoidXNlciIsInVzZXJJZFRhZyI6IlVTRVIwMDIiLCJpYXQiOjE3NDQyNTg5ODQsImV4cCI6MTc0NDI2MjU4NH0.Htbd_Am4TnTKS6JDd-YpWbzObbpUPcRsToCeE1qdtbo",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": \"PROD001\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/filter/category?category=footware",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"filter",
+						"category"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "footware"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FILTERPRICE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Y3MjJiMTAwODNkZjYxYTQ5MDE0MDIiLCJyb2xlIjoidXNlciIsInVzZXJJZFRhZyI6IlVTRVIwMDIiLCJpYXQiOjE3NDQyNTg5ODQsImV4cCI6MTc0NDI2MjU4NH0.Htbd_Am4TnTKS6JDd-YpWbzObbpUPcRsToCeE1qdtbo",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": \"PROD001\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/filter/price?min=22000&max=23500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"filter",
+						"price"
+					],
+					"query": [
+						{
+							"key": "min",
+							"value": "22000"
+						},
+						{
+							"key": "max",
+							"value": "23500"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
